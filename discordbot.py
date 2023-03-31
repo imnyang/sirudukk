@@ -14,16 +14,9 @@ client = discord.Client()
 async def on_ready():
     print(f'Logged in as {client.user}.')
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content == f'{PREFIX}call':
-        await message.channel.send("callback!")
-
-    if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('Hello!')
+@client.command(name = "윤석열")
+async def yunsuck(ctx):
+    await ctx.respond("윤석열은 현 대한민국 대통령이다.")
 
 
 try:
