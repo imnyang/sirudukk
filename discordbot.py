@@ -25,8 +25,8 @@ async def dice(ctx):
     embed = discord.Embed(title="🎲 콩", description=f'**{random.randint(1,6)}**', color=discord.Color.green())
     await ctx.respond(embed=embed)
 
-@godn.command(name="소라고등님", description="제 인생은 어떻게 될까요?")
-async def magic(ctx):
+@godn.command(name="마법의소라고등님", description="제 인생은 어떻게 될까요?")
+async def magic(ctx, text:str):
     sora = random.randint(0,1)
     embed = 0
     if(sora == 1):
