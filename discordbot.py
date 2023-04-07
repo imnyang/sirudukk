@@ -9,7 +9,6 @@ load_dotenv()
 TOKEN = os.environ['TOKEN']
 
 client = discord.Bot()
-godn = discord.SlashCommandGroup("마법의", "마법의 소라고등님")
 
 @client.event
 async def on_ready():
@@ -25,7 +24,7 @@ async def dice(ctx):
     embed = discord.Embed(title="🎲 콩", description=f'**{random.randint(1,6)}**', color=discord.Color.green())
     await ctx.respond(embed=embed)
 
-@godn.command(name="마법의소라고등님", description="제 인생은 어떻게 될까요?")
+@client.command(name="마법의소라고등님", description="제 인생은 어떻게 될까요?")
 async def magic(ctx, text:str):
     sora = random.randint(0,1)
     embed = 0
